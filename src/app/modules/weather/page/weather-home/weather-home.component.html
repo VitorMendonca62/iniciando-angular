@@ -1,0 +1,13 @@
+<div class="container">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input
+      type="text"
+      name="cityName"
+      [(ngModel)]="initialCity"
+      class="inputCityName"
+    />
+    <fa-icon class="iconSearch" size="lg" [icon]="faSearch" (click)="onSubmit()"></fa-icon>
+  </form>
+</div>
+
+<app-weather-card *ngIf="data" [weatherData]="data"></app-weather-card>

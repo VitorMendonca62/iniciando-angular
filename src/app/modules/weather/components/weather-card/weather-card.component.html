@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="tempAndImage" #mainImage [style]="takePath()">
+    <p>{{ weatherData.name }}</p>
+    <p>{{ weatherData.main.temp.toString().split(".")[0] }}°C</p>
+  </div>
+
+  <div class="containerCardInfos">
+    <p>Mais informações</p>
+    <div class="cardInfos">
+      <div>
+        <div>
+          <fa-icon size="lg" [icon]="faThermometerEmpty"></fa-icon> Minima
+        </div>
+        <span>{{ weatherData.main.temp_min.toString().split(".")[0] }}°C</span>
+      </div>
+      <div>
+        <div>
+          <fa-icon size="lg" [icon]="faThermometerFull"></fa-icon>
+          Maxima
+        </div>
+        <span>{{ weatherData.main.temp_max.toString().split(".")[0] }}°C</span>
+      </div>
+      <div>
+        <div>
+          <fa-icon size="lg" [icon]="faDroplet"></fa-icon>
+          Humidade
+        </div>
+        <span>{{ weatherData.main.humidity.toString().split(".")[0] }}%</span>
+      </div>
+      <div>
+        <div><fa-icon size="lg" [icon]="faWind"></fa-icon> Vento</div>
+        <span>{{ weatherData.wind.speed }} km/h</span>
+      </div>
+    </div>
+  </div>
+</div>

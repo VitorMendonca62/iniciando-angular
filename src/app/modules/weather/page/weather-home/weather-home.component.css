@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.inputCityName {
+  background-color: #152b83;
+  color: #fff;
+  border-radius: 16px;
+  width: 12.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 1px solid transparent;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.inputCityName:focus {
+  border-color: #fff;
+}
+
+.iconSearch {
+  margin-left: 0.5rem;
+  color: #fff;
+  cursor: pointer;
+}
